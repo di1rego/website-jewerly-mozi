@@ -1,0 +1,127 @@
+.product {
+  position: relative;
+  margin: 10px;
+  padding: 12px 0;
+}
+
+.product__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product__row_item {
+  display: block;
+  width: calc(100% / 12 * 3 - 30px);
+  min-height: 100%;
+  /* margin: 15px; */
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--light);
+}
+
+.img-scale {
+  display: inline-block;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.product__row_item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.75s ease-out;
+}
+
+.product__row_item img:hover {
+  transform: scale(1.4);
+}
+
+.product__row_item_info {
+  padding: 0 10px;
+}
+
+.product__row_item_info h3 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: calc(16px + (19 - 16) * ((100vw - 320px) / (1440 - 320)));
+}
+
+.product__row_item_info p {
+  display: inline-block;
+  font-weight: 500;
+  font-size: calc(16px + (19 - 16) * ((100vw - 320px) / (1440 - 320)));
+  opacity: 0.4;
+}
+
+.product__row_item_info_rating ul {
+  display: flex;
+}
+
+/* rating */
+.product__row_item_info_rating ul li {
+  display: block;
+  font-size: 24px;
+  color: var(--light);
+}
+
+.product__row_item_info_rating ul li svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.product__row_item_info_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__row_item_info_price span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.add-to-cart {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  transition: all 0.4s ease-out;
+}
+
+.add-to-cart:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+@media screen and (max-width: 920px) {
+  .product__row_item {
+    width: calc(100% / 12 * 5 - 30px);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .product__row_item {
+    width: calc(100% / 12 * 6 - 30px);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .product__row_item {
+    width: calc(100% - 30px);
+  }
+}

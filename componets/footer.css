@@ -1,0 +1,133 @@
+.footer {
+  position: relative;
+  margin: 10px;
+  padding: 24px 0;
+}
+
+.footer-wrapper {
+  margin: 0 10px;
+}
+
+.footer__row,
+.footer__row_w {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.footer__row_w {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.footer__row_item {
+  display: block;
+  margin: 15px;
+}
+
+.footer__row_item:first-child {
+  margin: 15px 0 15px 15px;
+}
+
+.footer__row_item:nth-child(2) {
+  /* width: 250px; */
+  width: calc(250px + (355 - 250) * ((100vw - 320px) / (1440 - 320)));
+  margin: 15px 0 15px 15px;
+}
+
+.footer__row_item:last-child {
+  margin: 15px 0 15px 15px;
+}
+
+.footer-logo {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50% 10px 10px 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px var(--light);
+  text-align: center;
+  transition: all 1s ease-out;
+  margin: 0 10px;
+}
+
+/* logo-effect */
+.footer-logo span {
+  transition: all 0.2s ease-out;
+}
+
+.footer-logo:hover {
+  transform: rotate(-5deg);
+  background-color: var(--light);
+}
+
+.footer-logo:hover span {
+  opacity: 0;
+}
+
+.footer-logo p {
+  margin-top: 50%;
+  padding-left: 5px;
+}
+
+.footer-logo span {
+  color: #fff;
+}
+
+.footer__row_item_tlw h3 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: var(--fs19-16);
+  color: rgba(0, 0, 0, 0.6);
+  margin-right: 10px;
+}
+
+.footer__row_item_tlw a {
+  /* display: inline; */
+  display: inline-block;
+  font-weight: 700;
+  font-size: var(--fs19-16);
+  color: #fff;
+  transition: all 0.4s ease-out;
+  text-decoration: underline;
+}
+
+.footer__row_item_tlw a:hover {
+  color: var(--light);
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.footer__row_item p {
+  display: block;
+  font-weight: 500;
+  font-size: var(--fs19-16);
+  /* color: rgba(0, 0, 0, .6); */
+  color: #fff;
+}
+
+.footer__row_social {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.footer__row_social a {
+  display: inline-block;
+  margin: 0 calc(10px + (12 - 10) * ((100vw - 320px) / (1440 - 320)));
+  font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1440 - 320)));
+  color: #fff;
+  transition: all 0.4s ease-out;
+}
+
+.footer__row_social a:last-child {
+  margin: 0 0 0 calc(10px + (12 - 10) * ((100vw - 320px) / (1440 - 320)));
+}
+
+.footer__row_social a:hover {
+  color: var(--light);
+}

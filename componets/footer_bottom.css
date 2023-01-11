@@ -1,0 +1,19 @@
+.footer_bottom {
+  position: relative;
+  /* background-color: #eee;
+    opacity: .4; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.footer_bottom-wrapper {
+  margin: 15px 15px 0 15px;
+  padding: 24px 0;
+}
+
+.footer_bottom-wrapper p {
+  display: block;
+  font-weight: 400;
+  font-size: var(--fs19-16);
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}

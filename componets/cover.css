@@ -1,0 +1,120 @@
+.cover {
+  position: relative;
+  /* height: 100vh; */
+  /* min-height: 720px; */
+  /* min-height: calc(516px + (720 - 516) * ((100vw - 320px) / (1440 - 320))); */
+  min-height: calc(516px + (830 - 516) * ((100vw - 320px) / (1440 - 320)));
+  background-size: cover;
+  /* background-position: center; */
+  /* background-position-y: 25%;
+    background-position-x: 40%; */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.cover::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg,
+      rgba(51, 51, 51, 0.4),
+      rgba(51, 51, 51, 0.2));
+}
+
+.cover-wrapper {
+  position: relative;
+  max-width: 600px;
+  padding: 0 30px;
+}
+
+.cover-wrapper h1 {
+  display: inline-block;
+  line-height: 1.1;
+  font-size: calc(19px + (36 - 19) * ((100vw - 320px) / (1440 - 320)));
+  color: #fff;
+  /* margin-top: calc(50% - 15vh); */
+  margin-top: 24%;
+  margin-bottom: 10px;
+}
+
+.cover-wrapper p {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: calc(19px + (24 - 19) * ((100vw - 320px) / (1440 - 320)));
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 15px;
+}
+
+/* .btn button {
+  display: inline-block;
+  min-width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: calc(16px + (19 - 16) * ((100vw - 320px) / (1440 - 320)));
+  color: #fff;
+  transition: all 0.4s ease-out;
+} */
+.btn {
+  display: inline-block;
+  text-align: center;
+  line-height: 38px;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: calc(16px + (19 - 16) * ((100vw - 320px) / (1440 - 320)));
+  color: #fff;
+  transition: all 0.4s ease-out;
+}
+
+/* .btn button:hover,
+button:active {
+  background-color: var(--dark);
+  box-shadow: none;
+  color: var(--light);
+  margin-top: 6px;
+} */
+.btn:hover {
+  background-color: var(--dark);
+  box-shadow: none;
+  color: var(--light);
+  margin-top: 6px;
+}
+
+.mouse {
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  animation: mouse 0.9s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
+}
+
+@keyframes mouse {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 978px) {
+  .cover {
+    background-position-y: 25%;
+    background-position-x: 40%;
+  }
+}

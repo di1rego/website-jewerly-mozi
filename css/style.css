@@ -1,0 +1,122 @@
+@import url("../componets/header.css");
+@import url("../componets/cover.css");
+@import url("../componets/gallery.css");
+@import url("../componets/product.css");
+@import url("../componets/slider.css");
+@import url("../componets/tabs.css");
+@import url("../componets/reviews.css");
+@import url("../componets/information.css");
+@import url("../componets/footer.css");
+@import url("../componets/footer_bottom.css");
+
+@font-face {
+  font-family: "Roboto-Light", sans-serif;
+  src: url("../fonts/Roboto/Roboto-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Regular", sans-serif;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Medium", sans-serif;
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Bold", sans-serif;
+  src: url("../fonts/Roboto/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1em;
+  color: #000;
+  background-color: var(--dark);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* height: 999vh; */
+  user-select: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+:root {
+  --dark: #2d2d2d;
+  --light: #c09a50;
+  --fs19-16: calc(16px + (19 - 16) * ((100vw - 320px) / (1440 - 320)));
+  --fs24-19: calc(19px + (24 - 19) * ((100vw - 320px) / (1440 - 320)));
+}
+
+.none {
+  display: none;
+}
+
+.btn-up {
+  position: fixed;
+  z-index: 10000;
+  bottom: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+  right: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+  width: 50px;
+  height: 50px;
+  background-color: var(--light);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: btn-up 0.9s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
+  transition: all 0.2s ease-out;
+}
+
+.btn-up-show {
+  opacity: 1;
+  transition: all 0.2s ease-out;
+}
+
+@keyframes btn-up {
+  from {
+    transform: translateY(-5px);
+    /* box-shadow: 0 0 100px var(--light); */
+  }
+
+  to {
+    transform: translateY(2.5px);
+    box-shadow: 0 0 10px var(--dark);
+  }
+}
